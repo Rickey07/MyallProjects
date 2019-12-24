@@ -1,0 +1,97 @@
+def getdate():
+    import datetime
+    return datetime.datetime.now()
+
+def log_or_retrieve():
+    """This is a function to ask user what he want to do log or retrieve"""
+    print("what you want to do log or retrieve?\nPress 1 for log \nPress 2 for retrieve")
+    line="successfully printed"
+    n=int(input())
+    if n==1:
+        print("FOr whom you want to log\nPress 1 for harry \nPress 2 for rohan\nPress 3 for rickey")
+        m=int(input())
+        print("which you want to log?\nPress 1 for diet \n Press 2 for exercise")
+        j=int(input())
+        if m==1:
+            if j==1:
+                f=open("harry_diet.txt","a")
+                value=input("TYpe here")
+                k=f.write(str([str(getdate())])+": "+value+"\n")
+                print(line)
+                f.close()
+            elif j==2:
+                f=open("harry_exercise.txt","a")
+                value=input("Type here")
+                k=f.write(str([str(getdate())])+": "+value+"\n")
+                print(line)
+                f.close()
+        if m==2:
+            if j==1:
+                f=open("rohan_diet.txt","a")
+                value=input("Type here")
+                k=f.write(str([str(getdate())])+": "+value+"\n")
+                print(line)
+                f.close()
+            elif j==2:
+                f=open("rohan_exercise.txt","a")
+                value=input("Type here")
+                k=f.write(str([str(getdate())])+": "+value+"\n")
+                print(line)
+                f.close()
+        if m==3:
+            if j==1:
+                f=open("rickey_diet.txt","a")
+                value=input("Type here")
+                k=f.write(str([str(getdate())])+": "+value+"\n")
+                print(line)
+                f.close()
+            elif j==2:
+                value=input("Type here")
+                f=open("rickey_exercise.txt","a")
+                k=f.write(str([str(getdate())]) + ": " + value + "\n")
+                print(line)
+
+                f.close()
+
+    if n==2:
+        print("For whom you to want to retrieve\nPress 1 for harry\nPress 2 for rohan\nPress 3 for rickey")
+        z=int(input())
+        print("which you want to retreive?\nPress 1 for diet\nPress 2 for exercise")
+        o=int(input())
+        if z==1:
+            if o==1:
+                f=open("harry_diet.txt","r")
+                k=f.read()
+                print(k)
+                f.close()
+            elif o==2:
+                f=open("harry_exercise.txt","r")
+                k=f.read()
+                print(k)
+                f.close()
+        if z==2:
+            if o==1:
+                f=open("rohan_diet.txt","r")
+                k=f.read()
+                print(k)
+                f.close()
+            elif o==2:
+                f=open("rohan_exercise.txt","r")
+                k=f.read()
+                print(k)
+                f.close()
+        if z==3:
+            if o==1:
+                f=open("rickey_diet.txt","r")
+                k=f.read()
+                print(k)
+                f.close()
+            elif o==2:
+                f=open("rickey_exercise.txt","r")
+                k=f.read()
+                print(k)
+                f.close()
+    return n
+
+
+(log_or_retrieve())
