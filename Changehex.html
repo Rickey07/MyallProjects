@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hex color changing Application with SHowing the code of the color </title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+
+    <style>
+        #body{
+            background-color: white;
+            height: 100vh ;
+        }
+
+        #btn{
+            background-color: teal;
+            font-size: 1.3rem;
+            font-family: fantasy;
+            padding: 14px ;
+        }
+        .container{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+        #Tempgen{
+            text-align: center;
+            font-family: 'Roboto', sans-serif;
+            font-size: xx-large;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+        }
+
+    </style>
+</head>
+<body id="body">
+    <div id="Tempgen"></div>
+    <div class="container">
+        <button id="btn" onclick="Changehex()">Click Me</button>
+    </div>
+    <script>
+      //Get ref to body 
+    const  bodyEl=document.getElementById('body');
+      
+      // Get ref to div
+     const TempgenEl=document.getElementById('Tempgen');
+
+      // Making an array for storing all hex characters 
+    const  hexArray=[0,1,2,3,4,5,6,7,8,9,'A','B','C','D','E','F'];
+
+      //Writing a function for Displaying and changing the hex-color
+      function Changehex() {
+          let Hex='#';
+          // Now we are going to loop our array to get index no. of the array 
+          for (let i = 0; i < 6;  i++) {
+              const ArrayIndex = Math.floor(Math.random()*hexArray.length);
+              
+
+           const newhex=   Hex += hexArray[ArrayIndex];
+              
+              
+          //Changing the background color of the DOM
+          bodyEl.style.backgroundColor=newhex;
+          
+          // Now we are going to set our DOM
+         const domHex=`Hex Code :${newhex}`;
+          TempgenEl.textContent=domHex;
+          }
+      }
+
+    </script>
+</body>
+</html>
