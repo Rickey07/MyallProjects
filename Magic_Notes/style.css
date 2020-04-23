@@ -1,0 +1,11 @@
+body,html{
+    padding: 0;
+    margin: 0;
+}
+#textuparea{
+    font-weight: bold;
+    display: block;
+}
+.text{
+    display: block;
+}
