@@ -1,0 +1,54 @@
+*,body,html{
+    margin: 0;
+    padding: 0;
+}
+.btn-green{
+    color: rgb(12, 51, 12);
+    border: 1px solid rgb(12, 51, 12);
+}
+#itemInput{
+    border:1px solid rgb(12, 51, 12);
+}
+.btn-green:hover{
+    background-color: rgb(12, 51, 12);
+    color: white;
+}
+.feedback{
+    display: none;
+}
+.item{
+    display: flex;
+    justify-content: space-between;
+}
+.item-icon{
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+.complete-icon{
+    color: green;
+}
+.complete-icon:hover{
+    color: green;
+}
+.edit-item{
+    color: blue;
+}
+.edit-item:hover{
+    color: blue;
+}
+.delete-item{
+    color: red;
+}
+.delete-item:hover{
+    color: red;
+}
+.completed{
+    text-decoration: line-through;
+    opacity: 0.5;
+}
+.visibility{
+    opacity: 0.5;
+}
+.showItem{
+    display: block;
+}
